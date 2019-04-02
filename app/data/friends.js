@@ -1,4 +1,6 @@
-let friendArray = [
+let friends = [
+   
+//module.exports = [
    {
       name: "Jesus",
       photo: "https://via.placeholder.com/150",

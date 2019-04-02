@@ -1,38 +1,45 @@
 const express = require("express");
-const router = express.Router();
-
 const friends = require("../data/friends");
 
-///in one big function?////
+const path = require("path");
+const router = require('express').Router();
 
-router.get("/api/friends", function(req, res){
+
+router.get("/friends", function (req, res) {
    res.json(friends);
-
-})
-app.post("/api/friends", function(req, res) {
-   console.log(req.body.scores);
-
-   var userInput = req.body;
-
-   for(var i = 0; i < userInput.scores.length; i++) {
-     userInput.scores[i] = parseInt(userInput.scores[i]);
-   }
+   //res.send("get friends");
 });
 
-////function for determining friend match results goes here//////////////
+router.post("/friends", function (req, res) {
+   console.log(req.body);
+   console.log(friends)
 
-   for(var i = 0; i < friends.length; i++) {
-      var totalDifference = 0;
-      for(var j = 0; j < friends[i].scores.length; j++) {
-      var difference = Math.abs(userInput.scores[j] - friends[i].scores[j]);
-      totalDifference += difference;
+   let closestFriend = 50;
+   let closestFriendIndex = -1;
+
+   friends.forEach((friend, index) => {
+      
+      const formula = (accum, curr) => parseInt(accum) + parseInt(curr);
+
+      const score = friend.scores.reduce(formula)
+      const otherScore = req.body.scores.reduce(formula)
+
+      const diff = Math.abs(score - otherScore);
+      if (closestFriend > diff) {
+         closestFriend = diff;
+         closestFriendIndex = index
       }
-   };
+      console.log(score, otherScore)
+   })
+   console.log(closestFriend);
 
-   friends.push(userInput);
+   res.json(friends[closestFriendIndex]);
+   friends.push(req.body)
+   console.log(friends)
+});
 
-      res.json(friends[bestFriendIndex]);
+
+module.exports = router;
 
 
-//module.exports = router;
 

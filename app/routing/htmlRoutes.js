@@ -1,15 +1,18 @@
-const express = require("express");
-const router = express.Router();
 const path = require("path");
+const router = require("express").Router();
 
-router.get("/public/home", function(req, res){
+
+
+router.get("/home", function(req, res){
    res.sendFile(path.join(__dirname, "/../public/home.html"));
-
 })
 
-router.get("/public/survey", function(req, res){
+router.get("/survey", function(req, res){
    res.sendFile(path.join(__dirname, "/../public/survey.html"));
-
 });
 
 module.exports = router;
+
+
+
+
