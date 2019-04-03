@@ -41,29 +41,23 @@
                      Please rate each statement on scale of 1-5, 1 being "agree completely" to 5 being "disagree completely."
                   </div><br>
 
-
-                  <!---form action="/api/friends" method="POST"///-->
                   <label for="Q1">I have a small group of close friends, rather than many acquaintances. </label><br>
                   <div id="q1">
-                     <!-- <form action="" id="q1"> -->
                         <input type="radio" class="option" name="scores[0]" value="1"> Agree Completly
                         <input type="radio" class="option" name="scores[0]" value="2"> Agree
                         <input type="radio" class="option" name="scores[0]" value="3"> Niether Agree Nor Disagree
                         <input type="radio" class="option" name="scores[0]" value="4"> Disagree
                         <input type="radio" class="option" name="scores[0]" value="5"> Disagree Completely
-                     <!-- </form> -->
                   </div>
                   <br>
 
                   <label for="Q2">My career is my #1 priority. </label><br>
                   <div id="q2">
-                     <!----<form action="">-->
                         <input type="radio" class="option" name="scores[1]" value="1"> Agree Completly
                         <input type="radio" class="option" name="scores[1]" value="2"> Agree
                         <input type="radio" class="option" name="scores[1]" value="3"> Niether Agree Nor Disagree 
                         <input type="radio" class="option" name="scores[1]" value="4"> Disagree
                         <input type="radio" class="option" name="scores[1]" value="5"> Disagree Completely
-                     <!----</form>-->
                   </div><br>
 
                   <label for="Q3">Friends look to me to organize plans and make decisions. </label><br>
@@ -142,7 +136,7 @@
 
                </form>
 
-               <div id="resultModal" class="modal fade" role="dialog">
+               <div id="resultModal" class="modal" role="dialog">
                   <div class="modal-dialog">
                      <div class="modal-content">
                         <div class="modal-header">
@@ -159,105 +153,36 @@
                      </div>
                   </div>
                </div>
-
-               <!-- <form action="/" method="POST">-->
 <body>
    
 </body>
 </html>
 <script type="text/javascript">
-//$(document).ready(function () {
 
-   //$("#submitBtnx").on("click", function(event) {
-      //event.preventDefault();
+
+$(document).ready(function () {
 
    $("form").submit(function(event) {
    event.preventDefault();
 
-         $.ajax({
-            url:"/api/friends",
-            method: "POST",
-            data: $(this).serialize()
-            //console.log(this)
-         }).then(function(result) {console.log(result)}, 
-            function(jqXHR, status) {console.log(status)}
-         );
-            //});
+      $.ajax({
+         url:"/api/friends",
+         method: "POST",
+         data: $(this).serialize()
+         //console.log(this)
+      }).then(function(result) {
+         console.log(result)
+         
+         $("#newFriend").text(result.name);
+         $("#newFriendPic").attr("src", result.photo);
+         $("#newFriendModal").modal("resultModal");
+      }, 
+         function(jqXHR, status) {console.log(status)}
+      );
+
+
    });
-
-      
-         
   
-      // $(".option").on("click", function(event) {
-      //   console.log(this)
-      //   //$(".option").each(function (){
-      //       var xyz = $(this).val();
-      //       console.log(xyz);
-           
-      //       var answerArray = [];
-    
-      //       $(".option").each(function() {
-
-      //           //var answerscorrect = 0;
-
-      //           if ($(this).is(":checked") === true) {
-
-      //               var q = $(this).val();
-
-      //               answerArray.push(q);
-                    
-      //           };
-      //      });
-
-      // });
-  
-   //    var newEntry = true;
-      
-   //    if($("#name").val() === "" || $("#pic").val() === "") {
-   //       newEntry = false;
-   //       alert("Please provide your name and a picture")
-   //    } 
-   //    else if(
-   //       $(".option").is(":checked") === false) {
-   //       newEntry = false;
-   //       alert("Please answer all the questions")
-   //    }
-      
-   //    if(newEntry === true) {
-         
-   //       var newUser = {
-   //          name: $("#name").val().trim(),
-   //          photo: $("#pic").val().trim(),
-   //          answers: [
-   //             $("input[name=question1]:checked").val(),
-   //             $("q2, input[class=option]:checked").val(),
-   //             $("q3, input[class=option]:checked").val(),
-   //             $("q4, input[class=option]:checked").val(),
-   //             $("q5, input[class=option]:checked").val(),
-   //             $("q6, input[class=option]:checked").val(),
-   //             $("q7, input[class=option]:checked").val(),
-   //             $("q8, input[class=option]:checked").val(),
-   //             $("q9, input[class=option]:checked").val(),
-   //             $("q10, input[class=option]:checked").val()
-   //          ]
-   //       };
-         
-   //       console.log(newUser);
-
-   //       var currentURL = window.location.origin;
-         
-   //       $.post(currentURL + "/api/friends", newUser, function(data) {
-   //          $("#newFriend").text(data.name);
-   //          $("#newFriendPic").attr("src", data.photo);
-   //          $("#newFriendModal").modal("toggle");
-   //       });
-
-   //    };
-   // });
-
- 
-
-
-
-
+   
+});
 </script>   
