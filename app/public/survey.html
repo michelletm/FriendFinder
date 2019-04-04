@@ -1,175 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA
    -Compatible" content="ie=edge">
    <title>Survey</title>
-   
+
    <!--Google Fonts-->
    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 
    <!--CSS Sheet-->
-   <link rel="stylesheet" type="text/css" href="../css/reset.css">
-   <link rel="stylesheet" type="text/css" href="../css/style.css">
-   
+   <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+   <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
    <!--jQuery-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
+
 
 </head>
 
-   <div class="container">
-      <div class="header">
-         <h1>Friend Finder Survey</h1>
-         <div id="quizbox">
+<div class="container">
+   <div class="header">
+      <h1>Friend Finder Survey</h1>
+      <div id="quizbox">
 
-               <form id="quizFormx"> 
-                  <div class="intro">
-                     <input id="name" type="text" class="form-control" name="name" placeholder="Name (Required)">
-                     <input id="pic" type="text" class="form-control" name="photo" placeholder="Photo (URL Required)">
-                  </div><br>
+         <form id="quizFormx">
+            <div class="intro">
+               <input id="name" type="text" class="form-control" name="name" placeholder="Name (Required)">
+               <input id="pic" type="text" class="form-control" name="photo" placeholder="Photo (URL Required)">
+            </div><br>
 
-                  <div class="quizTitle">
-                     Please rate each statement on scale of 1-5, 1 being "agree completely" to 5 being "disagree completely."
-                  </div><br>
+            <div class="quizTitle">
+               Please rate each statement on scale of 1-5, 1 being "agree completely" to 5 being "disagree completely."
+            </div><br>
 
-                  <label for="Q1">I have a small group of close friends, rather than many acquaintances. </label><br>
-                  <div id="q1">
-                        <input type="radio" class="option" name="scores[0]" value="1"> Agree Completly
-                        <input type="radio" class="option" name="scores[0]" value="2"> Agree
-                        <input type="radio" class="option" name="scores[0]" value="3"> Niether Agree Nor Disagree
-                        <input type="radio" class="option" name="scores[0]" value="4"> Disagree
-                        <input type="radio" class="option" name="scores[0]" value="5"> Disagree Completely
-                  </div>
-                  <br>
+            <label for="Q1">I have a small group of close friends, rather than many acquaintances. </label><br>
+            <div id="q1">
+               <input type="radio" class="option" name="scores[0]" value="1"> Agree Completly
+               <input type="radio" class="option" name="scores[0]" value="2"> Agree
+               <input type="radio" class="option" name="scores[0]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[0]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[0]" value="5"> Disagree Completely
+            </div>
+            <br>
 
-                  <label for="Q2">My career is my #1 priority. </label><br>
-                  <div id="q2">
-                        <input type="radio" class="option" name="scores[1]" value="1"> Agree Completly
-                        <input type="radio" class="option" name="scores[1]" value="2"> Agree
-                        <input type="radio" class="option" name="scores[1]" value="3"> Niether Agree Nor Disagree 
-                        <input type="radio" class="option" name="scores[1]" value="4"> Disagree
-                        <input type="radio" class="option" name="scores[1]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q2">My career is my #1 priority. </label><br>
+            <div id="q2">
+               <input type="radio" class="option" name="scores[1]" value="1"> Agree Completly
+               <input type="radio" class="option" name="scores[1]" value="2"> Agree
+               <input type="radio" class="option" name="scores[1]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[1]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[1]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q3">Friends look to me to organize plans and make decisions. </label><br>
-                  <div id="q3">
-                     <input type="radio" class="option" name="scores[2]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[2]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[2]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[2]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[2]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q3">Friends look to me to organize plans and make decisions. </label><br>
+            <div id="q3">
+               <input type="radio" class="option" name="scores[2]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[2]" value="2"> Agree
+               <input type="radio" class="option" name="scores[2]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[2]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[2]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q4">I would rather spend a night at home than go out and party.</label><br>
-                  <div id="q4">
-                     <input type="radio" class="option" name="scores[3]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[3]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[3]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[3]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[3]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q4">I would rather spend a night at home than go out and party.</label><br>
+            <div id="q4">
+               <input type="radio" class="option" name="scores[3]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[3]" value="2"> Agree
+               <input type="radio" class="option" name="scores[3]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[3]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[3]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q5">I still keep in contact with my best friend from high school.</label><br>
-                  <div id="q5">
-                     <input type="radio" class="option" name="scores[4]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[4]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[4]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[4]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[4]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q5">I still keep in contact with my best friend from high school.</label><br>
+            <div id="q5">
+               <input type="radio" class="option" name="scores[4]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[4]" value="2"> Agree
+               <input type="radio" class="option" name="scores[4]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[4]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[4]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q6">My friends and family would describe me as spontaneous.</label><br>
-                  <div id="q6">
-                     <input type="radio" class="option" name="scores[5]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[5]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[5]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[5]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[5]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q6">My friends and family would describe me as spontaneous.</label><br>
+            <div id="q6">
+               <input type="radio" class="option" name="scores[5]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[5]" value="2"> Agree
+               <input type="radio" class="option" name="scores[5]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[5]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[5]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q7">You can tell a lot about a person by how they dress and what car they drive.</label><br>
-                  <div id="q7">
-                     <input type="radio" class="option" name="scores[6]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[6]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[6]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[6]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[6]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q7">You can tell a lot about a person by how they dress and what car they drive.</label><br>
+            <div id="q7">
+               <input type="radio" class="option" name="scores[6]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[6]" value="2"> Agree
+               <input type="radio" class="option" name="scores[6]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[6]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[6]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q8">I am quick to provide support and condolensces to friends in need.</label><br>
-                  <div id="q8">
-                     <input type="radio" class="option" name="scores[7]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[7]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[7]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[7]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[7]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q8">I am quick to provide support and condolensces to friends in need.</label><br>
+            <div id="q8">
+               <input type="radio" class="option" name="scores[7]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[7]" value="2"> Agree
+               <input type="radio" class="option" name="scores[7]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[7]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[7]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q9">I value experiences over material possessions.</label><br>
-                  <div id="q9">
-                     <input type="radio" class="option" name="scores[8]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[8]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[8]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[8]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[8]" value="5"> Disagree Completely
-                  </div><br>
+            <label for="Q9">I value experiences over material possessions.</label><br>
+            <div id="q9">
+               <input type="radio" class="option" name="scores[8]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[8]" value="2"> Agree
+               <input type="radio" class="option" name="scores[8]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[8]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[8]" value="5"> Disagree Completely
+            </div><br>
 
-                  <label for="Q10">I easily share personal aspects of my life with my friends.</label><br>
-                  <div id="q10">
-                     <input type="radio" class="option" name="scores[9]" value="1"> Agree Completely
-                     <input type="radio" class="option" name="scores[9]" value="2"> Agree
-                     <input type="radio" class="option" name="scores[9]" value="3"> Niether Agree Nor Disagree 
-                     <input type="radio" class="option" name="scores[9]" value="4"> Disagree
-                     <input type="radio" class="option" name="scores[9]" value="5"> Disagree Completely
-                  </div><br>
-                  
-                  <input type="submit" id="submitBtnx"  width="200" height="150" alt="Submit">
+            <label for="Q10">I easily share personal aspects of my life with my friends.</label><br>
+            <div id="q10">
+               <input type="radio" class="option" name="scores[9]" value="1"> Agree Completely
+               <input type="radio" class="option" name="scores[9]" value="2"> Agree
+               <input type="radio" class="option" name="scores[9]" value="3"> Niether Agree Nor Disagree
+               <input type="radio" class="option" name="scores[9]" value="4"> Disagree
+               <input type="radio" class="option" name="scores[9]" value="5"> Disagree Completely
+            </div><br>
 
-               </form>
+            <input type="submit" id="submitBtnx" width="200" height="150" alt="Submit">
 
-               <div id="resultModal" class="modal">
-                     <div class="modal-content">
-                         <div class="modal-body">
-                           <h2 id="newFriend"></h2>
-                           <img id="newFriendPic" src="#">
-                        </div>
-                        <span class="close">&times;</span>
-                     </div>
-                  </div>
+         </form>
+
+         <div id="resultModal" class="modal">
+            <div class="modal-content">
+                  <span class="close">&times;</span>
+               <div class="modal-body">
+                  <h2 id="newFriend"></h2>
+                  <img id="newFriendPic" src="#">
                </div>
-<body>
-   
-</body>
+            </div>
+         </div>
+      </div>
+
+      <body>
+
+      </body>
+
 </html>
 <script type="text/javascript">
 
 
-$(document).ready(function () {
+   $(document).ready(function () {
 
-   $("form").submit(function(event) {
-   event.preventDefault();
+      $("form").submit(function (event) {
+         event.preventDefault();
 
-      $.ajax({
-         url:"/api/friends",
-         method: "POST",
-         data: $(this).serialize()
-         //console.log(this)
-      }).then(function(result) {
-         console.log(result)
-         
-         $("#newFriend").text(result.name);
-         $("#newFriendPic").attr("src", result.photo);
-         $("#resultModal").show();
-      }, 
-         function(jqXHR, status) {console.log(status)}
-      );
+         $.ajax({
+            url: "/api/friends",
+            method: "POST",
+            data: $(this).serialize()
+            //console.log(this)
+         }).then(function (result) {
+            console.log(result)
+
+            $("#newFriend").text(result.name);
+            $("#newFriendPic").attr("src", result.photo);
+            $("#resultModal").show();
+         },
+            function (jqXHR, status) { console.log(status) }
+         );
+
+
+      });
 
 
    });
-  
-   
-});
-</script>  
+</script>

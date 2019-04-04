@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 //CSS//
-//app.use("/static", express.static(path.join(_dirname, "app/static")))
+app.use("/static", express.static(path.join(__dirname, "app/static")))
 
 const htmlRoutes = require('./app/routing/htmlRoutes')
 const apiRoutes = require("./app/routing/apiRoutes")
