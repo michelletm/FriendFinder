@@ -6,15 +6,13 @@
    <meta http-equiv="X-UA
    -Compatible" content="ie=edge">
    <title>Survey</title>
-   <!--Boostrap-->
-   <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-   <!-Google Fonts-->
+   
+   <!--Google Fonts-->
    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 
-   <!--CSS Sheet
-   <link rel="stylesheet" type="text/css" href="../app/css/reset.css">
-   <link rel="stylesheet" type="text/css" href="../app/css/style.css">-->
+   <!--CSS Sheet-->
+   <link rel="stylesheet" type="text/css" href="../css/reset.css">
+   <link rel="stylesheet" type="text/css" href="../css/style.css">
    
    <!--jQuery-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,10 +23,6 @@
    <div class="container">
       <div class="header">
          <h1>Friend Finder Survey</h1>
-         <!---<div class="form-group">
-               <input id="name" type="text" class="form-control" placeholder="Name (Required)">
-               <input id="pic" type="text" class="form-control" placeholder="Photo (URL Required)">
-            </div><br>-->
          <div id="quizbox">
 
                <form id="quizFormx"> 
@@ -136,20 +130,13 @@
 
                </form>
 
-               <div id="resultModal" class="modal" role="dialog">
-                  <div class="modal-dialog">
+               <div id="resultModal" class="modal">
                      <div class="modal-content">
-                        <div class="modal-header">
-                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                           <h3 class="modal-title">You've been matched with:</h1>
-                        </div>
-                        <div class="modal-body">
+                         <div class="modal-body">
                            <h2 id="newFriend"></h2>
                            <img id="newFriendPic" src="#">
                         </div>
-                        <div class="modal-footer">
-                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+                        <span class="close">&times;</span>
                      </div>
                   </div>
                </div>
@@ -175,7 +162,7 @@ $(document).ready(function () {
          
          $("#newFriend").text(result.name);
          $("#newFriendPic").attr("src", result.photo);
-         $("#newFriendModal").modal("resultModal");
+         $("#resultModal").show();
       }, 
          function(jqXHR, status) {console.log(status)}
       );
@@ -185,4 +172,4 @@ $(document).ready(function () {
   
    
 });
-</script>   
+</script>  
