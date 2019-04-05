@@ -1,7 +1,7 @@
 let friends = [
    {
-      name: "Jesus",
-      photo: "",
+      name: "Jesus Christ",
+      photo: "https://via.placeholder.com/150",
       scores: [
          4,
          3,

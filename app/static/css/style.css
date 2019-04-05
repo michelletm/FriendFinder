@@ -1,19 +1,26 @@
 .container {
-  background-color: rgb(167, 218, 250);
-
+  background-color: rgb(188, 229, 254);
+  min-height: 100%;
 }
 
 .header {
-  padding: 20px;
+  padding: 30px;
+  font-weight: bold;
+
+}
+#name,
+#pic {
+  height: 20px;
+  width: 150px;
+  padding-left: 10px;
 }
 
 #quizbox {
   padding: 40px;
   font-family: 'El Messiri', sans-serif;
   font-size: 24px;
-
+  margin-left: 12px;
 }
-
 
 .modal {
    display: none; 
@@ -56,12 +63,20 @@
  h1 {
     text-align: center;
     font-size: 50px;
+    font-weight: bold;
     font-family: 'El Messiri', sans-serif;
+    padding: 15px;
  }
 
  h2 {
    padding: 15px;
    font-family: 'El Messiri', sans-serif;
+ }
+
+ .fullQ, 
+ #command {
+   font-size: 28px;
+   font-weight: bold;
  }
 
  #newFriend {
@@ -72,10 +87,9 @@
 
  }
  #newFriendPic {
-  margin: auto;
+  margin-left: 80px;
   width: 50%;
   padding: 10px;
-
  }
 
  #startBtn {
@@ -87,12 +101,13 @@
  }
 
  .friendBox {
-
   padding: 20px;
 
  }
+ 
  #startgame {
-   margin: auto;
+  margin-left: 565px;
+
  }
 
 
