@@ -7,7 +7,6 @@ const router = require('express').Router();
 
 router.get("/friends", function (req, res) {
    res.json(friends);
-   //res.send("get friends");
 });
 
 router.post("/friends", function (req, res) {

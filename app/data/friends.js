@@ -1,9 +1,7 @@
 let friends = [
-   
-//module.exports = [
    {
       name: "Jesus",
-      photo: "https://via.placeholder.com/150",
+      photo: "",
       scores: [
          4,
          3,
@@ -50,7 +48,7 @@ let friends = [
       ]
    },
    {
-      name: "Coltrane",
+      name: "John Coltrane",
       photo: "https://via.placeholder.com/150",
       scores: [
          1,
